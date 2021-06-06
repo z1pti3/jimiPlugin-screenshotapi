@@ -1,0 +1,65 @@
+{
+   "name": "screenshotapi",
+   "author": "z1p",
+   "version": 1.0,
+   "categories": [],
+   "description": "",
+   "icon": null,
+   "requirements": {
+      "jimi_min_version": null,
+      "jimi_max_version": null,
+      "plugins": []
+   },
+   "collections": {},
+   "triggers": {},
+   "actions": {
+      "websiteScreenshot": {
+         "display_name": "websiteScreenshot",
+         "className": "_websiteScreenshot",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiToken",
+               "schema_value": "apiToken",
+               "type": "input",
+               "label": "apiToken",
+               "description": ""
+            },
+            {
+               "schema_item": "targetURL",
+               "schema_value": "targetURL",
+               "type": "input",
+               "label": "targetURL",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      }
+   },
+   "settings": {}
+}
